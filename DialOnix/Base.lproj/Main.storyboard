@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="TDP-bd-dCl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="7AM-G2-nt1">
+            <objects>
+                <viewController id="TDP-bd-dCl" customClass="ViewController" customModule="DialOnix" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gJB-1o-8mX"/>
+                        <viewControllerLayoutGuide type="bottom" id="tUX-Lc-3QA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lMt-Hp-IH7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Registered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4py-iL-1TT">
+                                <rect key="frame" x="130.5" y="76" width="114.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTH-nu-cl8">
+                                <rect key="frame" x="50" y="577" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QkA-z7-seJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="ioL-Yf-jM4"/>
+                                </constraints>
+                                <state key="normal" title="Hangup"/>
+                                <connections>
+                                    <action selector="onHangup:" destination="TDP-bd-dCl" eventType="touchUpInside" id="gTn-C4-atM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8W-RK-3L7">
+                                <rect key="frame" x="225" y="577" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pwM-Zh-j85"/>
+                                    <constraint firstAttribute="width" constant="100" id="wAN-XR-i3F"/>
+                                </constraints>
+                                <state key="normal" title="Dial"/>
+                                <connections>
+                                    <action selector="onDial:" destination="TDP-bd-dCl" eventType="touchUpInside" id="hbq-X3-WO5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BTH-nu-cl8" firstAttribute="leading" secondItem="lMt-Hp-IH7" secondAttribute="leading" constant="50" id="5vF-1C-5V0"/>
+                            <constraint firstItem="4py-iL-1TT" firstAttribute="top" secondItem="gJB-1o-8mX" secondAttribute="bottom" constant="56" id="Acj-ee-rch"/>
+                            <constraint firstAttribute="trailing" secondItem="b8W-RK-3L7" secondAttribute="trailing" constant="50" id="Afq-ym-lLK"/>
+                            <constraint firstItem="tUX-Lc-3QA" firstAttribute="top" secondItem="b8W-RK-3L7" secondAttribute="bottom" constant="50" id="hRD-Ss-O8j"/>
+                            <constraint firstItem="BTH-nu-cl8" firstAttribute="centerY" secondItem="b8W-RK-3L7" secondAttribute="centerY" id="lTI-Je-kDy"/>
+                            <constraint firstItem="4py-iL-1TT" firstAttribute="centerX" secondItem="lMt-Hp-IH7" secondAttribute="centerX" id="sbf-sq-0cI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="regStatusLabel" destination="4py-iL-1TT" id="VOg-96-oKg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UgU-kK-Vt6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="560.79999999999995" y="-287.40629685157421"/>
+        </scene>
+    </scenes>
+</document>
